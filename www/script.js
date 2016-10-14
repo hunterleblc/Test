@@ -6,7 +6,7 @@ function scan()
                         {
                             if(result.format == "QR_CODE")
                             {
-                               
+                               alert(result.text);
                                
                             }
                         }
