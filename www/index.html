@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
     <head>
        
@@ -8,8 +8,74 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <div style="background-color: black">
-                    <a target="_blank" href="javascript:scan();" style="font-size: 50px; background-color: green"><button>Scan</button></a>
+                    <a target="_blank" href="javascript:scan();" style="font-size: 50px; background-color: green; padding:100px;"><button>Scan</button></a>
   </div>
-        </script>
+<button onclick="getLocation()">Try It</button>
+<script type="text/javascript" src="b.js"></script>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
     </body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<h1 id="one">Davenport<br/>Walks</h1>
+<h1 id="two">Davenport<br/>Walks</h1>
+<div id="Menu" class="sidenav">
+  <a href=""  id="close" onclick="closeMenu()"><b>X</b></a>
+  <a href="index.html" id="homecubby">
+        <div id="homeicon">&#127968;</div>
+        <div id="home"> Home</div>
+  </a>
+    <a href="" id="trailcubby">
+    <div id="trailicon">&#128203;</div>
+    <div id="trail">Trails</div>
+    </a>
+  <a href="" id="aboutcubby">
+    <div id="abouticon">&#9432;</div>
+    <div id="about">About</div>
+  </a>
+</div>
+
+<span style="font-size:50px;cursor:pointer;" onclick="openMenu()"><b>&#x2261;</b></span>
+
+<div class="scann">
+<button onclick="scan();">Scan<br/>Code</button>
+</a>
+</div>
+
+<script>
+
+function openMenu() {
+    document.getElementById("Menu").style.width = "100%";
+}
+
+function closeMenu() {
+    document.getElementById("Menu").style.width = "0";
+}
+</script>
+     
+</body>
 </html>

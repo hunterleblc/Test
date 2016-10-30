@@ -1,4 +1,4 @@
-function scan()
+  function scan()
             {
                 cordova.plugins.barcodeScanner.scan(
                     function (result) {
@@ -6,8 +6,11 @@ function scan()
                         {
                             if(result.format == "QR_CODE")
                             {
-                               alert(result.text);
-                               
+                                
+                                    
+
+                                    alert(result.text);
+                                
                             }
                         }
                     },
