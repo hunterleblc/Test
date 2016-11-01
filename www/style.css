@@ -1,9 +1,10 @@
 body {
     font-family: "Lato", sans-serif;
-    background-image: url('davsmall.jpg');
+    background-image: url('dav2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 51% 100%; 
+    background-size: 200% 200%;
 }
 .sidenav {
     height: 100%;
@@ -66,6 +67,22 @@ body {
         font-size: 25pt;
 }
 #abouticon{
+        font-size: 30pt;
+}
+#testcubby{
+    position: absolute;
+    text-align: center;
+    left: 60%;
+    top: 50%;
+
+    line-height: 200%;
+    text-decoration: none;
+    color: #CCCCCC;
+}
+#test{
+        font-size: 25pt;
+}
+#testicon{
         font-size: 30pt;
 }
 #close{
