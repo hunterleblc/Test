@@ -1,10 +1,9 @@
 body {
     font-family: "Lato", sans-serif;
-    background-image: url('dav2.jpg');
+    background-image: url('davsmall.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 51% 100%; 
-    background-size: 200% 200%;
+    background-position: 51% 100%;
 }
 .sidenav {
     height: 100%;
