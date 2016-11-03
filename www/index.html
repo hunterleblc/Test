@@ -23,7 +23,7 @@
     <div id="abouticon">&#9432;</div>
     <div id="about">About</div>
   </a>
-  <a onclick="onDeviceReady();" id="testcubby">
+  <a onclick="onDeviceReady(); closeMenu();" id="testcubby">
     <div id="testicon">&#128034;</div>
     <div id="test">Test</div>
   </a>
@@ -44,10 +44,16 @@ function openMenu() {
 
 function closeMenu() {
     document.getElementById("Menu").style.width = "0";
+
 }
+
 function onDeviceReady() {
          var ref = window.open('http://68.73.64.225/dashboard/', '_blank', 'location=no,toolbar=no');
+         ref.addEventListener('loadstart', function(event) {var n = event.url.localeCompare("http://68.73.64.225/dashboard/home.html"); if (n==0) {ref.close() } });
     }
+function Home(){
+  alert("Go Home!");
+}
 </script>
      
 </body>
