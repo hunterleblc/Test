@@ -87,12 +87,16 @@ body {
 #close{
         position: absolute;
     text-align: center;
-    left: 80%;
-    top: 5%;
+    left: 66%;
+    top: 0%;
     font-size: 25pt;
     line-height: 100%;
     text-decoration: none;
     color: #CCCCCC;
+    padding-top: 10%;
+    padding-right: 25%;
+    padding-bottom: 5%;
+    padding-left: 15%;
 }
 
 span{
