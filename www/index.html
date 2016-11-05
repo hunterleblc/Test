@@ -1,15 +1,16 @@
-<!doctype html>
-<html style="padding: 0px; margin: 0px">
-    <head>
-        <title>Sidebar</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body style="padding: 0px; margin: 0px; margin-top: 10%;">
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <h1 id="one">Davenport<br/>Walks</h1>
-        <div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 100%; left: -100%; background-color: #CCCCCC; transition: all 0.5s ease-in-out;">
-            <p href=""  id="close" style="color: #CCCCCC;"><b>X</b></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<h1 id="one">Davenport<br/>Walks</h1>
+<h1 id="two">Davenport<br/>Walks</h1>
+<div id="Menu" class="sidenav">
+  <a href=""  id="close" ontouchend="myFunction()"><b>X</b></a>
   <a href="#" id="homecubby" ontouchend="location.reload();location.href='index.html'">
         <div id="homeicon">&#127968;</div>
         <div id="home"> Home</div>
@@ -28,37 +29,54 @@
   </a>
 </div>
 
+<span style="font-size:50px;cursor:pointer;" ontouchend="myFunction2();"><b>&#x2261;</b></span>
 
-        </div>
-        <span style="font-size:50px;cursor:pointer; color: #CCCCCC;" ontouchend="toggle_sidebar()"><b>&#x2261;</b></span>
-    </body>
-    <script>
-        function toggle_sidebar()
-        {
-            var sidebar = document.getElementById("sidebar");
-           
-            console.log(sidebar.style.left);
-           
-            if(sidebar.style.left == "-100%")
-            {
-                sidebar.style.left = "0px";
-            }
-            else
-            {
-                sidebar.style.left = "-100%";
-            }
-        }
-    </script>
-    <div class="scann">
+<div class="scann">
 <button ontouchend="scan();">Scan<br/>Code</button>
-
+</a>
 </div>
 
 <script>
+
+    function myFunction() {
+    document.getElementById("Menu").style.webkitTransform = "translate3d(-100%,0,0)";
+}
+function myFunction2() {
+
+    document.getElementById("Menu").style.webkitTransform = "translate3d(0,0,0)";
+}
 
 function onDeviceReady() {
          var ref = window.open('http://192.168.1.77/dashboard/', '_blank', 'location=no,toolbar=no,transitionstyle=crossdissolve');
          ref.addEventListener('loadstart', function(event) {var n = event.url.localeCompare("http://192.168.1.77/dashboard/home.html"); if (n==0) {ref.close() } });
     }
 </script>
+     
+</body>
 </html>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body style="top: 0; left: 0;">
+<script type="text/javascript" src="cordova.js"></script>
+<div id="Menu" style="left:0;top: 0; height: 100%;width: 100%;background-color: green; position: fixed; -webkit-transform: translate3d(-100px,0px,0px);  transition: .5s; opacity: .5;">asdf</div>
+<div onclick ="myFunction();" style="position: fixed; top: 10%; left: 10%;" id="test">asdfasdf</div>
+<div onclick="myFunction2();" style="position: fixed; top: 50%; left: 10%;" id="test2">asdfkjsdaf</div>
+<script type="text/javascript">
+    function myFunction() {
+        alert("Test");
+    document.getElementById("Menu").style.webkitTransform = "translate3d(0,0,0)";
+}
+function myFunction2() {
+        alert("Test");
+    document.getElementById("Menu").style.webkitTransform = "translate3d(100%,0,0)";
+}
+</script>
+</body>
+</html>
+-->
