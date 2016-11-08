@@ -109,6 +109,8 @@ span{
 border-radius: 0%;
     padding-left: 3%;
     padding-right: 3%;
+    z-index: 999;
+    opacity: .7;
 }
 .scann{
     position: absolute;

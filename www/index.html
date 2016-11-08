@@ -7,15 +7,13 @@
 <body>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="script.js"></script>
-<h1 id="one">Davenport<br/>Walks</h1>
 <h1 id="two">Davenport<br/>Walks</h1>
 <div id="Menu" class="sidenav">
-  <a href=""  id="close" ontouchend="myFunction()"><b>X</b></a>
   <a href="#" id="homecubby" ontouchend="location.reload();location.href='index.html'">
         <div id="homeicon">&#127968;</div>
         <div id="home"> Home</div>
   </a>
-    <a href="#" id="trailcubby" ontouchend="location.reload();location.href='index.html'">
+    <a href="#" id="trailcubby" ontouchend="location.reload();location.href='test.html'">
     <div id="trailicon">&#128203;</div>
     <div id="trail">Trails</div>
     </a>
@@ -29,26 +27,30 @@
   </a>
 </div>
 
-<span style="font-size:50px;cursor:pointer;" ontouchend="myFunction2();"><b>&#x2261;</b></span>
+<span style="font-size:50px;cursor:pointer;" ontouchend="toggle();"><b>&#x2261;</b></span>
 
 <div class="scann">
 <button ontouchend="scan();">Scan<br/>Code</button>
-</a>
 </div>
 
 <script>
-
-    function myFunction() {
-    document.getElementById("Menu").style.webkitTransform = "translate3d(-100%,0,0)";
+var x = 0;
+    function toggle() {
+      if (x==0) {
+        document.getElementById("Menu").style.webkitTransform = "translate3d(0,0,0)";
+        x=1
+      }
+      else if (x==1) {
+        document.getElementById("Menu").style.webkitTransform = "translate3d(-100%,0,0)";
+        x=0;
+      }
+    
 }
-function myFunction2() {
 
-    document.getElementById("Menu").style.webkitTransform = "translate3d(0,0,0)";
-}
 
 function onDeviceReady() {
-         var ref = window.open('http://192.168.1.77/dashboard/', '_blank', 'location=no,toolbar=no,transitionstyle=crossdissolve');
-         ref.addEventListener('loadstart', function(event) {var n = event.url.localeCompare("http://192.168.1.77/dashboard/home.html"); if (n==0) {ref.close() } });
+         var ref = window.open('http://68.73.64.225/dashboard/', '_blank', 'location=no,toolbar=no,transitionstyle=crossdissolve');
+         ref.addEventListener('loadstart', function(event) {var n = event.url.localeCompare("http://68.73.64.225/dashboard/home.html"); if (n==0) {ref.close() } });
     }
 </script>
      
@@ -65,8 +67,8 @@ function onDeviceReady() {
 <body style="top: 0; left: 0;">
 <script type="text/javascript" src="cordova.js"></script>
 <div id="Menu" style="left:0;top: 0; height: 100%;width: 100%;background-color: green; position: fixed; -webkit-transform: translate3d(-100px,0px,0px);  transition: .5s; opacity: .5;">asdf</div>
-<div onclick ="myFunction();" style="position: fixed; top: 10%; left: 10%;" id="test">asdfasdf</div>
-<div onclick="myFunction2();" style="position: fixed; top: 50%; left: 10%;" id="test2">asdfkjsdaf</div>
+<div ontouchend ="myFunction();" style="position: fixed; top: 10%; left: 10%;" id="test">asdfasdf</div>
+<div ontouchend="myFunction2();" style="position: fixed; top: 50%; left: 10%;" id="test2">asdfkjsdaf</div>
 <script type="text/javascript">
     function myFunction() {
         alert("Test");
